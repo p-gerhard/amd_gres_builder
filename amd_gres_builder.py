@@ -1,6 +1,6 @@
-import subprocess
 import json
 import os
+import subprocess
 from collections import defaultdict
 
 _RSMI_BIN = "/opt/rocm/bin/rocm-smi"
