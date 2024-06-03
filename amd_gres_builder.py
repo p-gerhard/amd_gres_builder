@@ -255,7 +255,7 @@ if __name__ == "__main__":
         print(
             "Please set ROCM_PATH environment variable to the proper installation path of ROCm"
         )
-        print("Exampe: export ROCM_PATH=/opt/rocm")
+        print("Example: export ROCM_PATH=/opt/rocm")
         exit(-1)
     else:
         get_gres_conf()
