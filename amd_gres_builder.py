@@ -253,9 +253,9 @@ if __name__ == "__main__":
     if not os.path.exists(_RSMI_BIN):
         print(f"Binary file '{_RSMI_BIN}' does not exist.")
         print(
-            "Please set ROCM_PATH environment variable to the proper installation path of ROCm eg."
+            "Please set ROCM_PATH environment variable to the proper installation path of ROCm"
         )
-        print("export ROCM_PATH=/opt/rocm")
+        print("Exampe: export ROCM_PATH=/opt/rocm")
         exit(-1)
     else:
         get_gres_conf()
