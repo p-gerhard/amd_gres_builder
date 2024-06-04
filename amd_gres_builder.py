@@ -360,7 +360,6 @@ def get_gres_conf():
 
     # Links value must be rearranged using the same permutation
     for val in gres_dict.values():
-        # print("before", val["Links"])
         val["Links"] = [
             x
             for _, x in sorted(
@@ -372,8 +371,14 @@ def get_gres_conf():
     for val in gres_dict.values():
         val["Links"] = ",".join(val["Links"])
 
-    # Assemble 'gres.conf' line for each GPU
-    for key, val in gres_dict.items():
+    for idx, val in enumerate(gres_dict.values()):
+        # Assemble 'gres.conf' line comment
+        cmt = (
+            f"# GPU {idx} with uuid={val['UUID']} and serial={val['Serial']}"
+        )
+        print(cmt)
+
+        # Assemble 'gres.conf' line
         line = " ".join(
             [
                 f"{subkey}={val[subkey]}"
