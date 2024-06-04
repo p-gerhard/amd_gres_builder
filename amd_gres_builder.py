@@ -22,7 +22,6 @@ import os
 import subprocess
 from collections import defaultdict
 
-_ROCM_PATH = os.environ.get("ROCM_PATH", "/opt/rocm-5.6.1")
 _ROCM_PATH = os.environ.get("ROCM_PATH", "/opt/rocm")
 _RSMI_BIN = f"{_ROCM_PATH}/bin/rocm-smi"
 
