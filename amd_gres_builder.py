@@ -135,7 +135,7 @@ def _rocm_smi_get_file():
             path = f"/dev/dri/by-path/pci-{pci_bus.lower()}-render"
 
             # Find device file path through symlink
-            path = f"/dev/dri{os.path.abspath(os.readlink(path))}"
+            path = f"/dev/dri/{(os.path.basename(os.readlink(path)))}"
             res[key] = {"File": path}
 
     return res
